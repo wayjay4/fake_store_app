@@ -76,5 +76,7 @@ NOTES:
 -install axios: npm install axios
 -install: npm install react-router-dom
 -install: npm install redux react-redux
+-install: npm install @reduxjs/toolkit
 
 -add semantic-ui css to index.html head see website: https://cdnjs.com/libraries/semantic-ui
+-add redux-devtools to browser: https://github.com/reduxjs/redux-devtools
