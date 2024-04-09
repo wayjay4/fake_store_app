@@ -75,3 +75,6 @@ NOTES:
 -installation: npx create-react-app fakestoreapp
 -install axios: npm install axios
 -install: npm install react-router-dom
+-install: npm install redux react-redux
+
+-add semantic-ui css to index.html head see website: https://cdnjs.com/libraries/semantic-ui
