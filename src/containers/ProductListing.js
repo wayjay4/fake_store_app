@@ -17,13 +17,11 @@ const ProductListing = () => {
     };
 
     useEffect(() => {
-        fetchProducts().then(()=>{
-            // do something
-        });
+        fetchProducts();
     }, []);
 
     return (
-        <div className="ui grid container" style={{marginTop:"25px"}}>
+        <div className="ui grid container">
             <ProductComponent />
         </div>
     );
