@@ -77,6 +77,9 @@ NOTES:
 -install: npm install react-router-dom
 -install: npm install redux react-redux
 -install: npm install @reduxjs/toolkit
+-install: npm install react-markdown
 
 -add semantic-ui css to index.html head see website: https://cdnjs.com/libraries/semantic-ui
 -add redux-devtools to browser: https://github.com/reduxjs/redux-devtools
+-add fakeproductapi: https://fakestoreapi.com
+-used tailwind template at: https://tailwindcomponents.com/component/e-commerce-product-page
