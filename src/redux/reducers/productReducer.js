@@ -22,3 +22,16 @@ export const selectedProductReducer = (state = {}, {type, payload}) => {
             return state;
     }
 };
+
+export const addProductToCartReducer = (state = [], {type, payload}) => {
+    switch (type) {
+        case ActionTypes.ADD_PRODUCT_TO_CART:
+            return [...state, payload];
+        case ActionTypes.DELETE_PRODUCT_FROM_CART:
+            return [...state].filter((item) => {
+                return (item.id !== payload.id);
+            });
+        default:
+            return state;
+    }
+};

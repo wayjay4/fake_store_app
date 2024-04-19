@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux";
 
 const Header = () => {
+    const cart = useSelector((state) => state.cart);
+
     return (
         <div className="h-full bg-white pt-5 pb-10 px-20">
             <div className="flex items-center justify-between">
@@ -13,12 +16,16 @@ const Header = () => {
                     <h1 className="w-full text-gray-700 md:text-center text-2xl font-semibold">
                         Fake Department Store
                     </h1>
-                <div className="flex items-center align-center justify-end w-full">
+                <div className="flex justify-end w-full">
                     <button className="flex text-gray-600 focus:outline-none mx-4 sm:mx-0">
-                        <svg className="h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                        <span className="text-xl">Cart</span>
+                        <div className="flex items-center align-center">
+                            <svg className="h-5 w-5 mr-1" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                            <Link to="/cart">
+                                <span className="text-xl">Cart {cart.length}</span>
+                            </Link>
+                        </div>
                     </button>
 
                     <div className="flex sm:hidden">

@@ -1,10 +1,11 @@
 import React, {useEffect} from "react";
 import axios from "axios";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import ProductComponent from "./ProductComponent";
 import {setProducts} from "../redux/actions/productActions";
 
 const ProductListing = () => {
+    const products = useSelector(state => state.allProducts.products);
     const dispatch = useDispatch();
 
     const fetchProducts = async () => {
@@ -27,8 +28,9 @@ const ProductListing = () => {
 
     return (
         <div className="container mx-auto px-4">
+            <h1 className="text-5xl mt-3 flex content-start">Products</h1>
             <div className="popular-products text-sm sm:flex sm:flex-col sm:items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-4 gap-12 pb-16 md:items-stretch">
-                <ProductComponent />
+                <ProductComponent products={products} />
             </div>
         </div>
     );
